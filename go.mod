@@ -1,4 +1,4 @@
-module github.com/samuelmeuli/fathom
+module github.com/flopp/fathom
 
 go 1.14
 

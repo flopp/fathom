@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/samuelmeuli/fathom/pkg/datastore"
-	"github.com/samuelmeuli/fathom/pkg/models"
+	"github.com/flopp/fathom/pkg/datastore"
+	"github.com/flopp/fathom/pkg/models"
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 )

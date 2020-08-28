@@ -27,7 +27,7 @@ To start tracking, create a site in your Fathom dashboard and copy the tracking 
 For getting a development version of Fathom up and running, follow these steps:
 
 1. Ensure you have Go and NPM installed
-2. Clone this repository: `git clone https://github.com/samuelmeuli/fathom`
+2. Clone this repository: `git clone https://github.com/flopp/fathom`
 3. In the project directory, run the build command: `make build`
 4. Set [custom configuration values](docs/configuration.md) (optional)
 5. Register a user account: `./fathom user add --email=<email> --password=<password>`

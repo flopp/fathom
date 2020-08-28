@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/samuelmeuli/fathom/pkg/models"
+	"github.com/flopp/fathom/pkg/models"
 )
 
 // seed rand pkg on program init

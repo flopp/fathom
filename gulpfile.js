@@ -33,7 +33,7 @@ gulp.task('app-js', function () {
 });  
 
 gulp.task('tracker-js', function () {
-  return gulp.src('./assets/src/js/tracker.js')
+  return gulp.src('./assets/src/js/t.js')
         .pipe(babel({
             presets: ["@babel/preset-env"],
         }))

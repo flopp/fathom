@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/samuelmeuli/fathom/pkg/models"
+	"github.com/flopp/fathom/pkg/models"
 	log "github.com/sirupsen/logrus"
 )
 

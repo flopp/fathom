@@ -8,7 +8,7 @@ import (
 
 	"github.com/joho/godotenv"
 	"github.com/kelseyhightower/envconfig"
-	"github.com/samuelmeuli/fathom/pkg/datastore/sqlstore"
+	"github.com/flopp/fathom/pkg/datastore/sqlstore"
 	log "github.com/sirupsen/logrus"
 )
 

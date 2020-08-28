@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/gorilla/sessions"
-	"github.com/samuelmeuli/fathom/pkg/datastore"
+	"github.com/flopp/fathom/pkg/datastore"
 )
 
 type API struct {

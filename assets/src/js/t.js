@@ -140,7 +140,7 @@
 
   function findTrackerUrl() {
     const el = document.getElementById('fathom-script')
-    return el ? el.src.replace('tracker.js', 'collect') : '';
+    return el ? el.src.replace('t.js', 'collect') : '';
   }
 
   function trackPageview(vars) { 
@@ -148,7 +148,7 @@
 
     // Respect "Do Not Track" requests
     if('doNotTrack' in navigator && navigator.doNotTrack === "1") {
-      return;
+      ////return;
     }
 
     // ignore prerendered pages

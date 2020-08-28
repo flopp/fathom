@@ -35,7 +35,7 @@ func (api *API) Routes() *mux.Router {
 
 	// static assets & 404 handler
 	box := packr.NewBox("./../../assets/build")
-	r.Path("/tracker.js").Handler(serveTrackerFile(&box))
+	r.Path("/t.js").Handler(serveTrackerFile(&box))
 	r.Path("/").Handler(serveFileHandler(&box, "index.html"))
 	r.Path("/index.html").Handler(serveFileHandler(&box, "index.html"))
 	r.PathPrefix("/assets").Handler(http.StripPrefix("/assets", http.FileServer(box)))
@@ -47,7 +47,7 @@ func (api *API) Routes() *mux.Router {
 func serveTrackerFile(box *packr.Box) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Tk", "N")
-		next := serveFile(box, "js/tracker.js")
+		next := serveFile(box, "js/t.js")
 		next.ServeHTTP(w, r)
 	})
 }
