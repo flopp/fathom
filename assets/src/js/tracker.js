@@ -52,11 +52,10 @@
   function setupListeners() {
     document.querySelectorAll("a[target=_blank]").forEach((e) => {
       let link = e.name || e.id || e.href;
-      trackClick(link);
+      e.addEventListener("click", () => {
+        trackPageview({path: link});
+      });
     });
-  }
-  function trackClick(link) {
-    trackPageview({path: link});
   }
 
   function trackPageview(vars) { 
