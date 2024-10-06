@@ -49,6 +49,16 @@
     return el ? el.src.replace('tracker.js', 'collect') : '';
   }
 
+  function setupListeners() {
+    document.querySelectorAll("a[target=_blank]").forEach((e) => {
+      let link = e.name || e.id || e.href;
+      trackClick(link);
+    });
+  }
+  function trackClick(link) {
+    trackPageview({path: link});
+  }
+
   function trackPageview(vars) { 
     vars = vars || {};
 
@@ -158,4 +168,6 @@
 
   // process existing queue
   queue.forEach((i) => fathom.apply(this, i));
+
+  setupListeners();
 })()
