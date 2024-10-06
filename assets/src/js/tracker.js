@@ -103,6 +103,10 @@
   function trackPageview(vars) { 
     vars = vars || {};
 
+    if (localStorage && localStorage.getItem('skip-tracking') === 't') {
+      return;
+    }
+
     // Respect "Do Not Track" requests
     if('doNotTrack' in navigator && navigator.doNotTrack === "1") {
       return;
@@ -202,6 +206,18 @@
     // add to DOM to fire request
     document.body.appendChild(img);  
   }
+
+	// Make it easy to skip your own views.
+	if (location.hash === '#toggle-tracking') {
+		if (localStorage.getItem('skip-tracking') === 't') {
+			localStorage.removeItem('skip-tracking', 't')
+			alert('Tracking is now ENABLED in this browser.')
+		}
+		else {
+			localStorage.setItem('skip-tracking', 't')
+			alert('Tracking is now DISABLED in this browser until ' + location + ' is loaded again.')
+		}
+	}
 
   // override global fathom object
   window.fathom = function() {
