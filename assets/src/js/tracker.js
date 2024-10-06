@@ -56,11 +56,6 @@
       return;
     }
 
-    // Respect "Do Not Track" requests
-    if('doNotTrack' in navigator && navigator.doNotTrack === "1") {
-      return;
-    }
-
     // ignore prerendered pages
     if( 'visibilityState' in document && document.visibilityState === 'prerender' ) {
       return;
